@@ -1,4 +1,3 @@
-import Form from "./Form";
 export default function Home() {
-  return (<Form/>);
+  return <>This is Home</>;
 }
