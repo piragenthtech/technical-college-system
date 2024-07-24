@@ -1,5 +1,5 @@
 "use client";
-
+import formcss from "./form.module.css";
 import React, { useState } from "react";
 let switcher = true;
 
@@ -20,6 +20,7 @@ function Form() {
     <>
       <h1>{name}</h1>
       <button
+        className="formcss.clickme"
         onClick={() => {
           switchname();
           console.log(name);
