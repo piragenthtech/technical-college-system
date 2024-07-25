@@ -1,9 +1,9 @@
-import Header from "./Frontend/Header";
+import Header from "./frontend/Header";
 
 export default function Home() {
   return (
     <>
-      <Header></Header>
+      <Header />
     </>
   );
 }
