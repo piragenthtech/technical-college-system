@@ -1,4 +1,8 @@
 import axois from "axios";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+// import NavBar from "./components/NavBar";
+
 function App() {
   const apiCall = () => {
     axois.get("http://localhost:8080/").then((a) => {
@@ -9,7 +13,14 @@ function App() {
       console.log(e);
     });
   };
-  return <button onClick={apiCall}>Make api call</button>;
+  return (
+    <>
+      <Header />
+      {/* <NavBar />  */}
+      <Routes>{/* <Route path="/" element={} /> */}</Routes>
+      <button onClick={apiCall}>Make api call</button>
+    </>
+  );
 }
 
 export default App;
