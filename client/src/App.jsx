@@ -1,6 +1,7 @@
 import axois from "axios";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import StudentForm from "./components/StudentForm";
 // import NavBar from "./components/NavBar";
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
   return (
     <>
       <Header />
-      {/* <NavBar />  */}
-      <Routes>{/* <Route path="/" element={} /> */}</Routes>
       <button onClick={apiCall}>Make api call</button>
+      {/* <NavBar />  */}
+      <Routes>
+        <Route path="/Students" element={<StudentForm/>} />
+      </Routes>
     </>
   );
 }

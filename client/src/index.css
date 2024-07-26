@@ -2,7 +2,11 @@
   color-scheme: dark;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 20px;
+  display: block;
 }
+
+/* Header  */
+
 .headerhead {
   text-align: center;
   text-decoration: none;
@@ -32,4 +36,26 @@
 .headerhead .link {
   float: right;
   margin-left: 10px;
+}
+/* Student form  */
+.studentform h1 {
+  text-align: center;
+}
+.studentform {
+  margin-top: 100px;
+  float: left;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+.studentform td {
+  font-size: 2vh;
+}
+.studentform input {
+  margin: 4px;
+  padding: 10px;
+  width: 20vw;
+}
+
+.submitbutton {
+  cursor: pointer;
 }
