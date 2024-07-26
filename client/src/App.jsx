@@ -1,7 +1,11 @@
 import axois from "axios";
 function App() {
   const apiCall = () => {
-    axois.get("http://localhost:8080").then((e) => {
+    axois.get("http://localhost:8080/").then((a) => {
+      console.log(a);
+    });
+
+    axois.get("http://localhost:8080/students").then((e) => {
       console.log(e);
     });
   };
