@@ -10,20 +10,5 @@ const pool = mysql
   })
   .promise();
 
-export async function getNotes() {
-  const [rows] = await pool.query("select * from students;");
-  return rows;
-}
-
-export async function getNote(first_name) {
-  const [person] = await pool.query(
-    `
-    select * 
-    from students
-    where first_name= ?`,
-    [first_name]
-  );
-  return person;
-}
 
 // console.log(await getNote("test"));

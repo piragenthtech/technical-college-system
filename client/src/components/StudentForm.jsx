@@ -29,39 +29,45 @@ export default function StudentForm() {
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td>Address</td>
             <td>
-              <input type="text" name="firstname"></input>
+              <input type="text" name="Address"></input>
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td>Email</td>
             <td>
-              <input type="text" name="firstname"></input>
+              <input type="email" name="Email"></input>
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td>BOD</td>
             <td>
-              <input type="text" name="firstname"></input>
+              <input type="date" name="BOD"></input>
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td>Gender</td>
             <td>
-              <input type="text" name="firstname"></input>
+              <input type="text" name="Gender"></input>
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td>Cource Name</td>
             <td>
-              <input type="text" name="firstname"></input>
+              <input type="text" name="Cource Name"></input>
+            </td>
+          </tr>
+          <tr>
+            <td>Contact No</td>
+            <td>
+              <input type="tel" name="Contact No"></input>
             </td>
           </tr>
           <tr>
             <td colSpan={"2"}>
-                <center>
-              <input type="submit"  className="submitbutton"/>
+              <center>
+                <input type="submit" className="submitbutton" />
               </center>
             </td>
           </tr>
