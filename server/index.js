@@ -1,9 +1,10 @@
 // const express = require("express");
-import express from "express";
+import express, { json } from "express";
 import cors from "cors";
 import { StudentInsert } from "./database.js";
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 // STUDENT
 app.post("/api/studentinsert", (req, res) => {

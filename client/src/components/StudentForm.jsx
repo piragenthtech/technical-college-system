@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function StudentForm() {
-  const [stvalues, setstvalues] = useState();
+  const [stvalues, setstvalues] = useState("");
 
   const handleChangeStvalues = (values) => {
     setstvalues((prevStvalues) => ({
@@ -34,7 +34,7 @@ export default function StudentForm() {
   return (
     <div className="studentform">
       <h1>Student Details</h1>
-      <form method="post" onClick={handleClickStbutton()}>
+      <form method="post" onClick={handleClickStbutton}>
         <table>
           <tr>
             <td>First Name</td>
@@ -49,68 +49,111 @@ export default function StudentForm() {
           <tr>
             <td>Last Name</td>
             <td>
-              <input type="text" name="lastname"></input>
+              <input
+                type="text"
+                name="lastname"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>NIC</td>
             <td>
-              <input type="Number" name="nic"></input>
+              <input
+                type="Number"
+                name="nic"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Admission Number</td>
             <td>
-              <input type="text" name="admissionnumber"></input>
+              <input
+                type="text"
+                name="admissionnumber"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Address</td>
             <td>
-              <input type="text" name="Address"></input>
+              <input
+                type="text"
+                name="Address"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Email</td>
             <td>
-              <input type="email" name="Email"></input>
+              <input
+                type="email"
+                name="Email"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>BOD</td>
             <td>
-              <input type="date" name="BOD"></input>
+              <input
+                type="date"
+                name="BOD"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Gender</td>
             <td>
-              <input type="text" name="Gender"></input>
+              <input
+                type="text"
+                name="Gender"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Cource Name</td>
             <td>
-              <input type="text" name="CourceName"></input>
+              <input
+                type="text"
+                name="CourceName"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Joined Date</td>
             <td>
-              <input type="text" name="joined_date"></input>
+              <input
+                type="date"
+                name="joined_date"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
 
           <tr>
             <td>Contact No</td>
             <td>
-              <input type="tel" name="Contact_No"></input>
+              <input
+                type="tel"
+                name="Contact_No"
+                onChange={handleChangeStvalues}
+              ></input>
             </td>
           </tr>
           <tr>
             <td>Extracurricular Activities</td>
             <td>
-              <textarea name="extracurricular_activities"></textarea>
+              <textarea
+                name="extracurricular_activities"
+                onChange={handleChangeStvalues}
+              ></textarea>
             </td>
           </tr>
           <tr>
