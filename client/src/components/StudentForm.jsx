@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function StudentForm() {
   const [stvalues, setstvalues] = useState("");
+  const navigate = useNavigate();
 
   const handleChangeStvalues = (values) => {
     setstvalues((prevStvalues) => ({
@@ -10,7 +12,9 @@ export default function StudentForm() {
       [values.target.name]: values.target.value,
     }));
   };
-  const handleClickStbutton = () => {
+  const handleClickStbutton = (e) => {
+    e.preventDefault();
+    // console.log(stvalues.first_name);
     axios
       .post("http://localhost:8080/api/studentinsert", {
         first_name: stvalues.firstname,
@@ -28,13 +32,15 @@ export default function StudentForm() {
       })
       .then((response) => {
         console.log(response);
-      });
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
     <div className="studentform">
       <h1>Student Details</h1>
-      <form method="post" onClick={handleClickStbutton}>
+      <form method="post" onSubmit={handleClickStbutton}>
         <table>
           <tr>
             <td>First Name</td>
@@ -91,7 +97,7 @@ export default function StudentForm() {
             <td>
               <input
                 type="email"
-                name="Email"
+                name="email"
                 onChange={handleChangeStvalues}
               ></input>
             </td>

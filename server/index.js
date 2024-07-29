@@ -20,7 +20,7 @@ app.post("/api/studentinsert", (req, res) => {
   const { BOD } = req.body;
   const { extracurricular_activities } = req.body;
   const { email } = req.body;
-
+  console.log(req.body);
   const StudentFormInsert = {
     first_name: first_name,
     last_name: last_name,
