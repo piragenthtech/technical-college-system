@@ -1,12 +1,19 @@
-// const express = require("express");
-import express, { json } from "express";
-import cors from "cors";
-import { StudentInsert } from "./database.js";
+const express = require("express");
+// import express from "express";
+// import path from "path";
+const path = require("path");
+
+// import cors from "cors";
+const cors = require("cors");
+
+// import { StudentInsert } from "./database.js";
+const ImportedStudentInsert = require("./database.js");
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// STUDENT
+app.use(express.static(path.resolve(__dirname, "../client/dist")));
+
 app.post("/api/studentinsert", (req, res) => {
   const { first_name } = req.body;
   const { last_name } = req.body;
@@ -38,8 +45,12 @@ app.post("/api/studentinsert", (req, res) => {
     extracurricular_activities: extracurricular_activities,
     email: email,
   };
-  StudentInsert(StudentFormInsert);
+  ImportedStudentInsert.StudentInsert(StudentFormInsert);
   res.json(StudentFormInsert);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/dist", "index.html"));
 });
 
 app.listen(8080);
