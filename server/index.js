@@ -20,7 +20,10 @@ app.post("/api/studentinsert", (req, res) => {
   const { BOD } = req.body;
   const { extracurricular_activities } = req.body;
   const { email } = req.body;
+
+  // printing data from react
   console.log(req.body);
+
   const StudentFormInsert = {
     first_name: first_name,
     last_name: last_name,
@@ -36,6 +39,7 @@ app.post("/api/studentinsert", (req, res) => {
     email: email,
   };
   StudentInsert(StudentFormInsert);
+  res.json(StudentFormInsert);
 });
 
 app.listen(8080);

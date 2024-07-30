@@ -13,7 +13,7 @@ const pool = mysql
 
 // inserting details for student
 export async function StudentInsert(StudentFormInsert) {
-  const results = await pool.query(
+  const result = await pool.query(
     `INSERT INTO ${student_table} (First_name,Last_name,Admission_Number,Email,NIC,Address,Contact_No,Gender,Course_Name,joined_date,BOD,extracurricular_activities) Values(?,?,?,?,?,?,?,?,?,?,?,?)`,
     [
       StudentFormInsert.first_name,
@@ -30,5 +30,5 @@ export async function StudentInsert(StudentFormInsert) {
       StudentFormInsert.extracurricular_activities,
     ]
   );
-  return results;
+  return result;
 }
