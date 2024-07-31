@@ -30,5 +30,6 @@ export async function StudentInsert(StudentFormInsert) {
       StudentFormInsert.extracurricular_activities,
     ]
   );
+
   return result;
 }
