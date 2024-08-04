@@ -6,8 +6,11 @@ export default function Header() {
         Technical College system
       </a>
       <nav>
+        <a href="StudentsGet" className="link">
+          Get Student Details
+        </a>
         <a href="Students" className="link">
-          Students
+          Insert Student Details
         </a>
         <a href="Staffs" className="link">
           Staffs

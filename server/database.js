@@ -1,8 +1,8 @@
-// import mysql from "mysql2";
-const mysql = require("mysql2");
+import mysql from "mysql2";
+// const mysql = require("mysql2");
 
-// import dotenv from "dotenv";
-const dotenv = require("dotenv");
+import dotenv from "dotenv";
+// const dotenv = require("dotenv");
 dotenv.config();
 const student_table = process.env.MYSQL_STUDENT_TABLE;
 const pool = mysql
@@ -15,7 +15,7 @@ const pool = mysql
   .promise();
 
 // inserting details for student
-async function StudentInsert(StudentFormInsert) {
+export async function StudentInsert(StudentFormInsert) {
   const result = await pool.query(
     `INSERT INTO ${student_table} (First_name,Last_name,Admission_Number,Email,NIC,Address,Contact_No,Gender,Course_Name,joined_date,BOD,extracurricular_activities) Values(?,?,?,?,?,?,?,?,?,?,?,?)`,
     [
@@ -36,4 +36,11 @@ async function StudentInsert(StudentFormInsert) {
 
   return result;
 }
-module.exports = { StudentInsert };
+
+// Get Student Details
+export async function StudentGet() {
+  const [result] = await pool.query(`select * from ${student_table}`);
+  return result;
+}
+
+// module.exports = { StudentInsert };

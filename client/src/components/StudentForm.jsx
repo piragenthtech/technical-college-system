@@ -32,7 +32,7 @@ export default function StudentForm() {
       .post("http://localhost:8080/api/studentinsert", formdata)
       .then((response) => {
         console.log(response);
-        navigate("/");
+        navigate("/StudentsGet");
       })
       .catch((error) => console.log(error));
   };
@@ -118,10 +118,21 @@ export default function StudentForm() {
               <td>Gender</td>
               <td>
                 <input
-                  type="text"
+                  type="radio"
                   name="Gender"
+                  value="male"
                   onChange={handleChangeStvalues}
+                  className="gender"
                 ></input>
+                Male
+                <input
+                  type="radio"
+                  name="Gender"
+                  value="female"
+                  onChange={handleChangeStvalues}
+                  className="gender"
+                ></input>
+                Female
               </td>
             </tr>
             <tr>

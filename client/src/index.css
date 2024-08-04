@@ -2,14 +2,14 @@
   color-scheme: dark;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 20px;
-  display: block;
+  /* display: block; */
 }
 
 /* Header  */
 
 .headerhead {
-  text-align: center;
-  text-decoration: none;
+  /* text-align: center; */
+  /* text-decoration: none; */
 }
 
 .headerhead a {
@@ -69,6 +69,10 @@
   border: 1px solid white;
 }
 
+.studentform .gender {
+  width: 6vw;
+  margin: 1vh;
+}
 .submitbutton {
   cursor: pointer;
 }

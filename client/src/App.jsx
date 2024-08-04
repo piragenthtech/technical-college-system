@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import StudentForm from "./components/StudentForm";
+import StudentGet from "./components/StudentGet";
 // import NavBar from "./components/NavBar";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/Students" element={<StudentForm />} />
+        <Route path="/StudentsGet" element={<StudentGet />} />
       </Routes>
     </>
   );
