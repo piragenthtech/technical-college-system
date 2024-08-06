@@ -76,3 +76,22 @@
 .submitbutton {
   cursor: pointer;
 }
+
+/* Student Form Get */
+
+.Studentget  {
+  /* width: 100%; */
+  padding-top: 100px;
+}
+
+.Studentget td {
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 1vw;
+}
+.Studentget th {
+  border: 1px solid white;
+  border-radius: 2px;
+  font-style: bold;
+}
+

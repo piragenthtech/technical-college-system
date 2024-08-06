@@ -43,4 +43,12 @@ export async function StudentGet() {
   return result;
 }
 
+// Remove Student
+export async function StudentRemove(NIC) {
+  const [result] = await pool.query(
+    `DELETE FROM ${student_table} where  NIC=?`,
+    [NIC]
+  );
+  return result;
+}
 // module.exports = { StudentInsert };

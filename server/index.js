@@ -9,7 +9,7 @@ import cors from "cors";
 // const cors = require("cors");
 app.use(cors());
 
-import { StudentGet, StudentInsert } from "./database.js";
+import { StudentGet, StudentInsert, StudentRemove } from "./database.js";
 // const ImportedStudentInsert = require("./database.js");
 
 app.use((err, req, res, next) => {
@@ -61,4 +61,10 @@ app.get("/api/studentget", async (req, res) => {
   const result = await StudentGet();
   res.send(result);
 });
+
+app.get("/api/studentremove", async (req, res) => {
+  const result = await StudentRemove();
+  res.send(result);
+});
+
 app.listen(8080);

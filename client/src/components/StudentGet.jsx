@@ -16,8 +16,8 @@ export default function StudentGet() {
   }, []);
 
   return (
-    <div>
-      <table border={2}>
+    <div className="Studentget">
+      <table>
         <tr>
           <th>First_Name</th>
           <th>Last_Name</th>
