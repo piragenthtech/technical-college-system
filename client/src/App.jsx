@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import StudentForm from "./components/StudentForm";
 import StudentGet from "./components/StudentGet";
