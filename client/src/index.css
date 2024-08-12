@@ -2,14 +2,14 @@
   color-scheme: dark;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 20px;
-  /* display: block; */
+  display: block;
 }
 
 /* Header  */
 
 .headerhead {
-  /* text-align: center; */
-  /* text-decoration: none; */
+  text-align: center;
+  text-decoration: none;
 }
 
 .headerhead a {
@@ -20,7 +20,7 @@
   border: none;
   border-radius: 8px;
   padding: 10px;
-  background-color: rgb(105, 105, 105);
+  background-color: rgb(43, 43, 43);
 }
 
 .headerhead a:hover {
@@ -79,7 +79,7 @@
 
 /* Student Form Get */
 
-.Studentget  {
+.Studentget {
   /* width: 100%; */
   padding-top: 100px;
 }
@@ -94,4 +94,3 @@
   border-radius: 2px;
   font-style: bold;
 }
-
